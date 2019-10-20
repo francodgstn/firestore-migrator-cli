@@ -3,24 +3,29 @@
 A simple CLI for [firestore-export-import](https://github.com/dalenguyen/firestore-backup-restore) 
 to help migrate firestore data between different environments.
 
+Feel free to improve it.
+
 ## Install
 
 `npm install firestore-migrator-cli`
 
 ## Use
 
-Run and follow the questions, better to use full path for target and config file. 
+Run and follow the questions, better to use full path for target and config files. 
 
 `firestore-migrator`  
-
 
 You can also directly pass the params:
 
 `firestore-migrator [export|import] --env=dev --file=/fullpath/target_file.json --config=/fullpath/firestore-migrator-config.js`
 
-The `--env` param should match one of the environment defied in the config file. 
+The `--env` param should match one of the environments defined in the config file. 
 
 ## Config file
+
+Get the Service Account keys for your firebase projects from [Firebase Console](https://console.firebase.google.com/) > Settings > Service Accounts > Generate new private key.
+
+Create your config file that should look like this:
 
 ```javascript
 const firestoreMigratorConfig = {
@@ -94,10 +99,9 @@ Firestore Rules:
 Firestore collection:   
 `firebase firestore:delete --all-collections`  
 
-Auth (replace `[?]` with the env specific info available in Firebase Console > Auth ):  
+Auth (replace `[?]` with the env specific info available in [Firebase Console](https://console.firebase.google.com/) > Auth ):  
 `firebase auth:export account_file.json --format=json`  
 `firebase auth:import account_file.json --hash-algo=SCRYPT --hash-key=[?]  --salt-separator=[?] --rounds=[?] --mem-cost=`  
-
 
 ## Issues
 
