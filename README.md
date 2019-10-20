@@ -9,12 +9,16 @@ to help migrate firestore data between different environments.
 
 ## Use
 
-`firestore-migrator`
+Run and follow the questions, better to use full path for target and config file. 
 
-You can also directly pass params:
+`firestore-migrator`  
 
-`firestore-migrator --file=target_file.json --env=dev --config=firestore-migrator-config.js`
 
+You can also directly pass the params:
+
+`firestore-migrator [export|export] --env=dev --file=/fullpath/target_file.json --config=/fullpath/firestore-migrator-config.js`
+
+The `--env` param should match one of the environment defied in the config file. 
 
 ## Config file
 
@@ -93,3 +97,10 @@ Firestore collection:
 Auth (replace `[?]` with the env specific info available in Firebase Console > Auth ):  
 `firebase auth:export account_file.json --format=json`  
 `firebase auth:import account_file.json --hash-algo=SCRYPT --hash-key=[?]  --salt-separator=[?] --rounds=[?] --mem-cost=`  
+
+
+## Issues
+
+- Importing dates and locations  
+In [firestore-export-import](https://github.com/dalenguyen/firestore-backup-restore) parameterValid check for dates and geo locations should be removed as in general documents (even in the same collection) may have different fields,
+see [Removed parameterValid](https://github.com/dalenguyen/firestore-backup-restore/pull/29).
