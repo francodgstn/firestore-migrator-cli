@@ -1,0 +1,33 @@
+{
+  "name": "firestore-migrator",
+  "version": "1.0.0",
+  "description": "A simple CLI to migrate firestore data between different environments.",
+  "main": "src/cli.js",
+  "bin": {
+    "francodagostino/firestore-migrator": "bin/firestore-migrator",
+    "firestore-migrator": "bin/firestore-migrator"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "config/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "firestore-migrator"
+  ],
+  "author": "Franco D'Agostino",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^4.1.1",
+    "esm": "^3.2.25",
+    "firestore-export-import": "^0.2.9",
+    "inquirer": "^7.0.0"
+  }
+}
