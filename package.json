@@ -1,5 +1,5 @@
 {
-  "name": "firestore-migrator",
+  "name": "firestore-migrator-cli",
   "version": "1.0.0",
   "description": "A simple CLI to migrate firestore data between different environments.",
   "main": "src/cli.js",

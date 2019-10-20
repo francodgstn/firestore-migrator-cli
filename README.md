@@ -3,7 +3,11 @@
 A simple CLI for [firestore-export-import](https://github.com/dalenguyen/firestore-backup-restore) 
 to help migrate firestore data between different environments.
 
-## Usage
+## Install
+
+`npm install firestore-migrator-cli`
+
+## Use
 
 `firestore-migrator`
 
@@ -86,6 +90,6 @@ Firestore Rules:
 Firestore collection:   
 `firebase firestore:delete --all-collections`  
 
-Auth (replace `[?]` with the env specific info availabel in Firebase Console > Auth ):  
+Auth (replace `[?]` with the env specific info available in Firebase Console > Auth ):  
 `firebase auth:export account_file.json --format=json`  
 `firebase auth:import account_file.json --hash-algo=SCRYPT --hash-key=[?]  --salt-separator=[?] --rounds=[?] --mem-cost=`  
