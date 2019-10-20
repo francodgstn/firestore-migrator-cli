@@ -1,6 +1,6 @@
 {
   "name": "firestore-migrator-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple CLI to migrate firestore data between different environments.",
   "main": "src/cli.js",
   "bin": {
@@ -12,6 +12,11 @@
     "src/",
     "config/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francodgstn/firestore-migrator-cli.git"
+  },
+  "homepage": "https://github.com/francodgstn/firestore-migrator-cli",
   "publishConfig": {
     "access": "public"
   },
@@ -19,6 +24,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "firebase",
+    "firestore",
+    "backup",
+    "restore",
+    "import",
+    "export",
     "cli",
     "firestore-migrator"
   ],
