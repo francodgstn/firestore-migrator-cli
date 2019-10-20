@@ -16,7 +16,7 @@ Run and follow the questions, better to use full path for target and config file
 
 You can also directly pass the params:
 
-`firestore-migrator [export|export] --env=dev --file=/fullpath/target_file.json --config=/fullpath/firestore-migrator-config.js`
+`firestore-migrator [export|import] --env=dev --file=/fullpath/target_file.json --config=/fullpath/firestore-migrator-config.js`
 
 The `--env` param should match one of the environment defied in the config file. 
 
